@@ -100,6 +100,7 @@ mod physics_world {
         ) -> Option<RayCastInfo> {
             let direction = ray.try_normalize()?;
             let rapier_ray = Ray::new(start.into_rapier(), direction.into_rapier());
+            println!("internal direction: {direction:#?}");
 
             let result = self.query_pipeline.cast_ray_and_get_normal(
                 &*self.colliders,
