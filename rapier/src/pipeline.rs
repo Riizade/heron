@@ -39,7 +39,7 @@ mod physics_world {
     ///
     /// See the [`ray_casting`](https://github.com/jcornaz/heron/blob/main/examples/ray_casting.rs)
     /// example for a detailed usage example.
-    #[derive(SystemParam, Debug)]
+    #[derive(SystemParam)]
     pub struct PhysicsWorld<'w, 's> {
         pub query_pipeline: ResMut<'w, QueryPipeline>,
         pub colliders: ResMut<'w, ColliderSet>,
